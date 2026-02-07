@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->string('slug');
             $table->foreignId('type_id')->constrained();
             $table->foreignId('tier_id')->constrained();
             $table->foreignId('origin_id')->constrained();
-            $table->decimal('base_ersentage', 5, 2);
+            $table->decimal('base_persentage', 5, 2);
             $table->timestamps();
         });
     }
